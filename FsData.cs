@@ -143,7 +143,7 @@ namespace FlexibleEditor {
                             if(!int.TryParse(cell.ToString(), out var val))
                                 throw new InvalidDataException($"Incorrect data type in row {rowIdx}, cell {colIdx + 1}. Expected integer.");
 
-                            sb.Append($"{(int)cell} ");
+                            sb.Append($"{val} ");
                             break;
                         case FsType.String:
                             if(cell == null) {

@@ -16,7 +16,7 @@ namespace FlexibleEditor {
             UpdateRowCount();
 
             var ver = Assembly.GetExecutingAssembly().GetName().Version;
-            Text = $"Flexible Editor v{ver.Major}.{ver.Minor}";
+            Text = $"Flexible Editor v{ver.Major}.{ver.Minor}.{ver.Build}";
         }
 
         private void DataGrid_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e) =>
