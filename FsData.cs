@@ -98,6 +98,7 @@ namespace FlexibleEditor {
                             // Integer
                             if(cell == "--") {
                                 row.Add(null);
+                                if(populateColumns) ColumnTypes.Add(FsType.Integer);
                                 continue;
                             }
 
