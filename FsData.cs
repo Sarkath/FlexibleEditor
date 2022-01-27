@@ -152,7 +152,7 @@ namespace FlexibleEditor {
                                 break;
                             }
 
-                            var bytes = Encoding.ASCII.GetBytes(cell.ToString());
+                            var bytes = Encoding.GetEncoding(1252).GetBytes(cell.ToString());
 
                             sb.Append('S');
                             foreach (var b in bytes) {
