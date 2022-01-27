@@ -48,7 +48,7 @@ namespace FlexibleEditor {
         /// </summary>
         /// <param name="filename"></param>
         public FsData(string filename) {
-            string ConvertString(byte[] bytes) => Encoding.ASCII.GetString(bytes).Trim('\0');
+            string ConvertString(byte[] bytes) => Encoding.GetEncoding(1252).GetString(bytes).Trim('\0');
 
             using(var fs = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.Read))
             using(var sr = new StreamReader(fs)) {
